@@ -85,9 +85,10 @@ contract Lottery is Ownable, ReentrancyGuard {
     function setWinnerNumber(
         uint256 ticketNumber
     ) external onlyOwner inState(LotteryState.Closed) {
-        // El ticket debe estar disponible
+        // El ticket debe ser menor que 100000
+        require(ticketNumber < 100000, "Numero de ticket invalido");
+        // Dar el premio
         if (ticketOwners[ticketNumber] != address(0)) {
-            // Dar el premio
             comTokenContract.transfer(ticketOwners[ticketNumber], winnerPrice);
         }
         emit WinnerNumber(ticketOwners[ticketNumber], ticketNumber);

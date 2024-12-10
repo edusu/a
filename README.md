@@ -64,3 +64,7 @@ $ forge --help
 $ anvil --help
 $ cast --help
 ```
+
+## Notas
+
+He tenido que cambiar las versiones de los contratos de OpenZeppelin a 0.8.20 para que funcione bien el contrato de loterías.
