@@ -44,6 +44,8 @@ contract Lottery is Ownable, ReentrancyGuard {
     function buyTicket(
         uint256 ticketNumber
     ) external nonReentrant inState(LotteryState.Open) {
+        // El ticket debe ser menor que 100000
+        require(ticketNumber < 100000, "Numero de ticket invalido");
         // El ticket debe estar disponible
         require(
             ticketOwners[ticketNumber] == address(0),

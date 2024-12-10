@@ -48,6 +48,8 @@ cast call 0xBF921f94Fd9eF1738bE25D8CeCFDFE2C822c81B0 "balanceOf(address)" 0x6273
 
 cast call 0xBF921f94Fd9eF1738bE25D8CeCFDFE2C822c81B0 "balanceOf(address)" 0xf17f52151EbEF6C7334FAD080c5704D77216b732 --rpc-url desa
 
+cast send 0xBF921f94Fd9eF1738bE25D8CeCFDFE2C822c81B0 "approve(address, uint256)" 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 10 --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
+
 // COMToken
 cast send 0xBeC8a9e485a4B75d3b14249de7CA6D124fE94795 "mint(address, uint256)" --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
 
