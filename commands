@@ -1,0 +1,58 @@
+// 0xfe3b557e8fb62b89f4916b721be55ceb828dbd73
+// 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63
+
+// 0x627306090abaB3A6e1400e9345bC60c78a8BEf57
+// 0xc87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3
+
+// 0xf17f52151EbEF6C7334FAD080c5704D77216b732
+// 0xae6ae8e5ccbfb04590405997ee2d52d2b330726137b875053c36d94e974d162f
+
+// 0x246548adb50d9055309d2fe803d0bc5c00dafcb4
+// 0xf3df6ace6c9f69fc35b929c8f99f4354b4c8ce3c682e0fc771eb6f7d61455cb9
+
+// 0x49f62c7f4e2bf6e0e919d1385f9aec1bf55e3913
+// 0x3e51f722fee34e0c52af41a27c5818848dfe2405741c83c70f5e59d1d49b8233
+
+cast send <address> "<function signature>" <args>... --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
+
+cast send 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 "openLottery()" --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
+
+cast call 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 "state()(uint8)" --rpc-url desa
+
+cast send 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 "openLottery()" --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
+
+cast send 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 "closeLottery()" --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
+
+cast send 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 "buyTicket(uint256)" 22 --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
+
+cast call 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 "getTicketOwner(uint256)(address)" 0 --rpc-url desa
+
+cast send 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 "setTicketPrice(uint256)" 20 --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
+
+cast send 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 "setWinnerPrice(uint256)" 20000 --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
+
+cast send 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 "setWinnerNumber(uint256)" 22 --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
+
+cast send 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 "cancelLottery()" --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
+
+// RDSToken
+cast send 0xBF921f94Fd9eF1738bE25D8CeCFDFE2C822c81B0 "mint(address, uint256)" 0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 10000 --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
+
+cast send 0xBF921f94Fd9eF1738bE25D8CeCFDFE2C822c81B0 "mint(address, uint256)" 0x627306090abaB3A6e1400e9345bC60c78a8BEf57 10000 --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
+
+cast send 0xBF921f94Fd9eF1738bE25D8CeCFDFE2C822c81B0 "mint(address, uint256)" 0xf17f52151EbEF6C7334FAD080c5704D77216b732 10000 --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
+
+cast call 0xBF921f94Fd9eF1738bE25D8CeCFDFE2C822c81B0 "balanceOf(address)" 0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-url desa
+
+cast call 0xBF921f94Fd9eF1738bE25D8CeCFDFE2C822c81B0 "balanceOf(address)" 0x627306090abaB3A6e1400e9345bC60c78a8BEf57 --rpc-url desa
+
+cast call 0xBF921f94Fd9eF1738bE25D8CeCFDFE2C822c81B0 "balanceOf(address)" 0xf17f52151EbEF6C7334FAD080c5704D77216b732 --rpc-url desa
+
+// COMToken
+cast send 0xBeC8a9e485a4B75d3b14249de7CA6D124fE94795 "mint(address, uint256)" --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
+
+cast call 0xBeC8a9e485a4B75d3b14249de7CA6D124fE94795 "balanceOf(address)" 0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-url desa
+
+cast call 0xBeC8a9e485a4B75d3b14249de7CA6D124fE94795 "balanceOf(address)" 0x627306090abaB3A6e1400e9345bC60c78a8BEf57 --rpc-url desa
+
+cast call 0xBeC8a9e485a4B75d3b14249de7CA6D124fE94795 "balanceOf(address)" 0xf17f52151EbEF6C7334FAD080c5704D77216b732 --rpc-url desa
