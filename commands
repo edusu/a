@@ -15,15 +15,13 @@
 
 cast send <address> "<function signature>" <args>... --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
 
-cast send 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 "openLottery()" --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
-
 cast call 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 "state()(uint8)" --rpc-url desa
 
 cast send 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 "openLottery()" --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
 
 cast send 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 "closeLottery()" --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
 
-cast send 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 "buyTicket(uint256)" 22 --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
+cast send 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 "buyTicket(uint256)" 23 --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
 
 cast call 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 "getTicketOwner(uint256)(address)" 0 --rpc-url desa
 
@@ -31,7 +29,7 @@ cast send 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 "setTicketPrice(uint256)" 2
 
 cast send 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 "setWinnerPrice(uint256)" 20000 --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
 
-cast send 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 "setWinnerNumber(uint256)" 22 --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
+cast send 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 "setWinnerNumber(uint256)" 23 --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
 
 cast send 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 "cancelLottery()" --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
 
@@ -51,7 +49,7 @@ cast call 0xBF921f94Fd9eF1738bE25D8CeCFDFE2C822c81B0 "balanceOf(address)" 0xf17f
 cast send 0xBF921f94Fd9eF1738bE25D8CeCFDFE2C822c81B0 "approve(address, uint256)" 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 10 --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
 
 // COMToken
-cast send 0xBeC8a9e485a4B75d3b14249de7CA6D124fE94795 "mint(address, uint256)" --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
+cast send 0xBeC8a9e485a4B75d3b14249de7CA6D124fE94795 "mint(address, uint256)" 0x3Ace09BBA3b8507681146252d3Dd33cD4E2d4F63 10000000 --private-key 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 --rpc-url desa --chain 1337
 
 cast call 0xBeC8a9e485a4B75d3b14249de7CA6D124fE94795 "balanceOf(address)" 0xfe3b557e8fb62b89f4916b721be55ceb828dbd73 --rpc-url desa
 
